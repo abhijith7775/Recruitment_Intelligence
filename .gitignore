@@ -1,11 +1,78 @@
-venv/
-*.pyc
+
+# ==============================
+# Python
+# ==============================
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ==============================
+# Django
+# ==============================
+*.log
 db.sqlite3
+db.sqlite3-journal
+media/
+
+# ==============================
+# Environment variables / Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Testing and coverage
+# ==============================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ==============================
+# Jupyter
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# IDE / Editors
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==============================
+# Operating System
+# ==============================
 .DS_Store
+Thumbs.db
+Desktop.ini
 
+# ==============================
+# Build and distribution
+# ==============================
+build/
+dist/
+*.egg-info/
 
-/////
+# ==============================
+# Temporary files
+# ==============================
+*.tmp
+*.bak
+*.old
 
-////
-
+# ==============================
+# Generated outputs
+# ==============================
+outputs/data_preparation/*.log
+outputs/data_preparation/temp/
