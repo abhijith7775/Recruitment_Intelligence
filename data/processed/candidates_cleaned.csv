@@ -1,0 +1,74 @@
+candidate_id,name,email,phone,location,experience_years,skills,education,source,application_date
+C001,Aarav Menon,aarav.menon@example.com,910000000001,Kochi,2,python;django;sql;git;html;css,BSc Computer Science,Job_Portal,2026-10-14
+C002,Diya Nair,diya.nair@example.com,910000000002,Thiruvananthapuram,1,python;sql;excel;power_bi,BCom,LinkedIn,2026-10-16
+C003,Rohan Das,rohan.das@example.com,910000000003,Bengaluru,3,excel;sql;python;power_bi;statistics,MSc Statistics,Company_Website,2026-10-16
+C004,Maya Thomas,maya.nair@example.com,910000000004,Thrissur,4,accounting;excel;taxation;payroll,BCom Finance,Employee_Referral,2026-10-18
+C005,Nikhil Varma,maya.nair@example.com,910000000005,Kozhikode,2,python;django;sql;git,BTech Information Technology,Job_Portal,2026-10-18
+C006,Ananya Pillai,ananya.pillai@example.com,910000000006,Kochi,2,excel;sql;python;power_bi;tableau,BBA,LinkedIn,2026-10-19
+C007,Ishan Joseph,ishan.joseph@example.com,910000000007,Chennai,5,sales;crm;communication;negotiation;lead_generation,BA English,Employee_Referral,2026-10-20
+C008,Sara Khan,sara.khan@example.com,910000000007,Hyderabad,3,customer_service;crm;communication;problem_solving,Diploma Customer Relations,Job_Portal,2026-10-20
+C009,Neeraj Kumar,neeraj.kumar@example.com,910000000009,Coimbatore,,python;linux;networking;cybersecurity,BSc Information Technology,Campus_Placement,2026-10-21
+C010,Meera Roy,meera.roy@example.com,910000000010,Kochi,1,,BA Visual Arts,Company_Website,2026-10-22
+C011,Vivek Shah,vivek.shah@example.com,910000000011,Pune,6,mechanical_design;autocad;solidworks;manufacturing,Diploma Mechanical Engineering,Job_Portal,2026-10-23
+C012,Fatima Ali,fatima.ali@example.com,910000000012,Kochi,2,hr_recruitment;onboarding;communication;excel,MBA Human Resources,LinkedIn,2026-10-24
+C013,Kiran Suresh,kiran.suresh@example.com,910000000013,Mysuru,0,content_writing;seo;social_media;canva,BA Journalism,Campus_Placement,2026-10-25
+C014,Arjun Paul,,,Palakkad,7,civil_engineering;autocad;site_supervision;estimation,BTech Civil Engineering,Employee_Referral,2026-10-26
+C015,Leena George,leena.george@example.com,910000000015,Kollam,3,operations;inventory;excel;vendor_management,BBA Operations,Job_Portal,2026-10-27
+C016,Aarav Menon,candidate001@example.test,,,0,communication;git;inventory;problem_solving;python;sql,B.Tech Computer Science,PDF_Upload,2026-11-04
+C017,Isha Nair,candidate002@example.test,,,1,sql,B.Sc. Computer Science,PDF_Upload,2026-11-04
+C018,Rohan Kulkarni,candidate003@example.test,,,3,communication;customer_service;networking,Diploma in Information Technology,PDF_Upload,2026-11-04
+C019,Meera Iyer,candidate004@example.test,,,5,communication;cybersecurity;linux;problem_solving,B.Tech Information Technology,PDF_Upload,2026-11-04
+C020,Kabir Shah,candidate005@example.test,,,8,linux;networking,B.Tech Computer Science,PDF_Upload,2026-11-04
+C021,Ananya Pillai,candidate006@example.test,,,0,excel;power_bi;python;sales;sql;statistics,B.Sc. Statistics,PDF_Upload,2026-11-04
+C022,Dev Malhotra,candidate007@example.test,,,1,communication;excel;operations;power_bi;problem_solving;sql,B.Com. Finance,PDF_Upload,2026-11-04
+C023,Sana Thomas,candidate008@example.test,,,3,machine_learning;python;statistics,M.Sc. Data Science,PDF_Upload,2026-11-04
+C024,Arjun Desai,candidate009@example.test,,,5,machine_learning;python,B.Tech Artificial Intelligence,PDF_Upload,2026-11-04
+C025,Nisha Rao,candidate010@example.test,,,8,communication;git;problem_solving;python;sql,B.Tech Information Systems,PDF_Upload,2026-11-04
+C026,Vikram Joshi,candidate011@example.test,,,0,accounting;excel,B.Com. Accounting,PDF_Upload,2026-11-04
+C027,Diya Krishnan,candidate012@example.test,,,1,accounting;excel;power_bi,MBA Finance,PDF_Upload,2026-11-04
+C028,Rahul Kapoor,candidate013@example.test,,,3,accounting;communication;excel;operations;problem_solving,B.Com. Commerce,PDF_Upload,2026-11-04
+C029,Aditi Varma,candidate014@example.test,,,5,accounting;excel;operations;payroll,B.Com. Business Administration,PDF_Upload,2026-11-04
+C030,Neil Fernandes,candidate015@example.test,,,8,accounting;excel,Internal Audit Associate | Finance & Accounting | Senior,PDF_Upload,2026-11-04
+C031,Priya Shetty,candidate016@example.test,,,0,communication;excel;onboarding;problem_solving,MBA Human Resources,PDF_Upload,2026-11-04
+C032,Karan Bhat,candidate017@example.test,,,1,communication;excel,,PDF_Upload,2026-11-04
+C033,Maya Chatterjee,candidate018@example.test,,,3,excel;operations,"Employee Data Quality Review: Audited a synthetic employee master file for missing fields, duplicate IDs and inconsistent department",PDF_Upload,2026-11-04
+C034,Aditya Bose,candidate019@example.test,,,5,communication;excel;problem_solving,BA English,PDF_Upload,2026-11-04
+C035,Tara Reddy,candidate020@example.test,,,8,communication;customer_service;excel,,PDF_Upload,2026-11-04
+C036,Sameer Khan,candidate021@example.test,,,0,crm;excel;lead_generation;negotiation;sales,,PDF_Upload,2026-11-04
+C037,Lavanya Das,candidate022@example.test,,,1,communication;excel;problem_solving;sales,MBA Marketing,PDF_Upload,2026-11-04
+C038,Harish Nambiar,candidate023@example.test,,,3,canva;sales;social_media,,PDF_Upload,2026-11-04
+C039,Pooja Mehta,candidate024@example.test,,,5,communication;sales;seo,BA Mass Communication,PDF_Upload,2026-11-04
+C040,Yash Patil,candidate025@example.test,,,8,communication;excel;problem_solving;sales,Market Research Associate | Sales & Marketing | Senior,PDF_Upload,2026-11-04
+C041,Neha Mathew,candidate026@example.test,,,0,excel;operations,,PDF_Upload,2026-11-04
+C042,Siddharth Jain,candidate027@example.test,,,1,communication;excel;inventory;operations,B.Com. Logistics,PDF_Upload,2026-11-04
+C043,Kavya Menon,candidate028@example.test,,,3,communication;excel;inventory;operations;power_bi;problem_solving;sql,MBA Supply Chain Management,PDF_Upload,2026-11-04
+C044,Farhan Ali,candidate029@example.test,,,5,excel;negotiation;operations,Procurement Associate | Operations & Supply Chain | Mid-level,PDF_Upload,2026-11-04
+C045,Ritika Sinha,candidate030@example.test,,,8,excel;inventory;operations,Diploma in Supply Chain Operations,PDF_Upload,2026-11-04
+C046,Manav Gupta,candidate031@example.test,,,0,communication;crm;customer_service;excel;problem_solving,Customer Support Associate | Customer Service | Entry-level,PDF_Upload,2026-11-04
+C047,Anjali D'Souza,candidate032@example.test,,,1,crm;customer_service;excel;onboarding,,PDF_Upload,2026-11-04
+C048,Nikhil Roy,candidate033@example.test,,,3,customer_service,Diploma in Computer Applications,PDF_Upload,2026-11-04
+C049,Sreya Balakrishnan,candidate034@example.test,,,5,communication;crm;customer_service;excel;problem_solving,,PDF_Upload,2026-11-04
+C050,Varun Mishra,candidate035@example.test,,,8,customer_service;excel;power_bi;sql,M.Sc. Psychology,PDF_Upload,2026-11-04
+C051,Amrita Sen,candidate036@example.test,,,0,canva;communication,,PDF_Upload,2026-11-04
+C052,Joel George,candidate037@example.test,,,1,communication;problem_solving,,PDF_Upload,2026-11-04
+C053,Rhea Mukherjee,candidate038@example.test,,,3,,UX Research Associate | Design & Content | Mid-level,PDF_Upload,2026-11-04
+C054,Akash Verma,candidate039@example.test,,,5,seo,,PDF_Upload,2026-11-04
+C055,Swathi Krishnan,candidate040@example.test,,,8,communication;problem_solving,Diploma in Multimedia,PDF_Upload,2026-11-04
+C056,Pranav Rao,candidate041@example.test,,,0,autocad;excel;manufacturing;mechanical_design;problem_solving;solidworks,B.Tech Mechanical Engineering,PDF_Upload,2026-11-04
+C057,Simran Kaur,candidate042@example.test,,,1,autocad;excel;manufacturing,B.Tech Electrical Engineering,PDF_Upload,2026-11-04
+C058,Deepak Nair,candidate043@example.test,,,3,communication;excel;manufacturing;problem_solving,B.Tech Industrial Engineering,PDF_Upload,2026-11-04
+C059,Aparna Kulkarni,candidate044@example.test,,,5,communication;excel;manufacturing,Diploma in Mechanical Engineering,PDF_Upload,2026-11-04
+C060,Zoya Ahmed,candidate045@example.test,,,8,excel;manufacturing,,PDF_Upload,2026-11-04
+C061,Ritesh Sharma,candidate046@example.test,,,0,autocad;civil_engineering;communication;estimation;excel;problem_solving;site_supervision,B.Tech Civil Engineering,PDF_Upload,2026-11-04
+C062,Keerthi Das,candidate047@example.test,,,1,autocad;civil_engineering;excel,Diploma in Civil Engineering,PDF_Upload,2026-11-04
+C063,Ibrahim K P,candidate048@example.test,,,3,autocad;civil_engineering;estimation;excel,B.Tech Civil Engineering,PDF_Upload,2026-11-04
+C064,Mitali Ghosh,candidate049@example.test,,,5,autocad;communication;problem_solving,Diploma in Civil CAD,PDF_Upload,2026-11-04
+C065,Sanjay Pillai,candidate050@example.test,,,8,excel,,PDF_Upload,2026-11-04
+C066,Adhill C,adhilc8848@gmail.com,8848706914,"Kochi, Kerala",0.4,python;c;html;css;flask;fastapi;rest_apis;sql;numpy;pandas;git;github;machine_learning;computer_vision;opencv;facenet;mtcnn;deep_learning,B.Tech Computer Science and Engineering (AI & ML),Resume_Upload,
+C067,Abhishek S,abhishekskumar27@gmail.com,9778775595,"Kollam, Kerala",0,python;html;css;mysql;scikit_learn;supervised_learning;linear_regression;logistic_regression;decision_trees;random_forest;naive_bayes;knn;gradient_boosting;pandas;numpy;eda;data_preprocessing;matplotlib;seaborn;power_bi;flask;java;flutter;dart;firebase,B.Tech Computer Science and Engineering,Resume_Upload,
+C068,Nimitha Josy,nimithajosy11@gmail.com,7034680835,"Kochi, Kerala",0,python;sql;mysql;data_cleaning;data_preprocessing;eda;data_visualization;power_bi;matplotlib;seaborn;pandas;numpy;machine_learning;html;css;flask;django;php,Bachelor of Computer Applications,Resume_Upload,
+C069,Nandana PS,nandanasrini@gmail.com,8891826697,"Kochi, Kerala",0.5,python;sql;mysql;excel;power_bi;tableau;numpy;pandas;data_cleaning;data_analysis;data_visualization;machine_learning;flask;html;css;django;sqlite,Bachelor of Computer Applications,Resume_Upload,
+C070,Yuktha Rajeev,yuktharajeev2004@gmail.com,8921344062,"Kochi, Kerala",0.5,python;sql;mysql;excel;power_bi;tableau;numpy;pandas;data_cleaning;data_analysis;data_visualization;machine_learning;flask;html;css;django;sqlite;scikit_learn,Bachelor of Computer Applications,Resume_Upload,
+C071,Megha Satheesh,meghasatheesh20005@gmail.com,9061247615,"Ernakulam, Kerala",0,python;sql;mysql;excel;power_bi;pandas;numpy;matplotlib;seaborn;data_cleaning;data_preprocessing;eda;data_visualization;machine_learning;flask;html;css;javascript;django,Bachelor of Computer Applications,Resume_Upload,
+C072,Angelo Helen Jaison,angelohelen756@gmail.com,8156816805,"Kochi, Kerala",0,python;c++;sql;mysql;excel;power_bi;tableau;matplotlib;seaborn;numpy;pandas;html;css;flask;canva;photopea;machine_learning;generative_ai;data_analysis;data_visualization,Bachelor of Computer Applications,Resume_Upload,
+C073,Sivakami P.S,sivakamisalijan05@gmail.com,6282809731,"Kochi, Kerala",0,python;sql;mysql;excel;power_bi;matplotlib;seaborn;pandas;numpy;data_cleaning;data_preprocessing;eda;data_visualization;machine_learning;html;css;flask,Bachelor of Computer Applications,Resume_Upload,
