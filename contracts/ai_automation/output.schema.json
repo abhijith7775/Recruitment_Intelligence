@@ -1,0 +1,384 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ai Automation Output",
+  "description": "Prototype 0.1 output contract for ai_automation.",
+  "type": "object",
+  "properties": {
+    "module": {
+      "type": "string",
+      "const": "ai_automation"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Unique identifier for this execution."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "partial_success",
+        "failed"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO 8601 date-time with timezone.",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "extractions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "document_id": {
+                "type": "string",
+                "description": "Input document identifier."
+              },
+              "candidate_id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Candidate ID if supplied."
+              },
+              "name": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "null"
+                    ],
+                    "description": "Extracted value; null when not found or uncertain."
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "source_text": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "Short supporting text or location reference; avoid copying unnecessary sensitive content."
+                  },
+                  "review_required": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "value",
+                  "confidence",
+                  "review_required"
+                ],
+                "additionalProperties": false,
+                "description": "Extracted field with confidence and review indicator."
+              },
+              "email": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "null"
+                    ],
+                    "description": "Extracted value; null when not found or uncertain."
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "source_text": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "Short supporting text or location reference; avoid copying unnecessary sensitive content."
+                  },
+                  "review_required": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "value",
+                  "confidence",
+                  "review_required"
+                ],
+                "additionalProperties": false,
+                "description": "Extracted field with confidence and review indicator."
+              },
+              "phone": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": [
+                      "string",
+                      "number",
+                      "null"
+                    ],
+                    "description": "Extracted value; null when not found or uncertain."
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "source_text": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "Short supporting text or location reference; avoid copying unnecessary sensitive content."
+                  },
+                  "review_required": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "value",
+                  "confidence",
+                  "review_required"
+                ],
+                "additionalProperties": false,
+                "description": "Extracted field with confidence and review indicator."
+              },
+              "experience_years": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "confidence": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "source_text": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "description": "Supporting text or reference."
+                  },
+                  "review_required": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "value",
+                  "confidence",
+                  "review_required"
+                ],
+                "additionalProperties": false,
+                "description": "Extracted experience."
+              },
+              "skills": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "skill": {
+                      "type": "string",
+                      "description": "Extracted skill text."
+                    },
+                    "canonical_skill": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "description": "Mapped canonical skill; null if unmapped."
+                    },
+                    "confidence": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "review_required": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "skill",
+                    "confidence",
+                    "review_required"
+                  ],
+                  "additionalProperties": false,
+                  "description": "Extracted skill item."
+                },
+                "description": "Extracted skills."
+              },
+              "education": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "description": "Extracted education entry."
+                    },
+                    "confidence": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    "review_required": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "confidence",
+                    "review_required"
+                  ],
+                  "additionalProperties": false,
+                  "description": "Education entry."
+                },
+                "description": "Extracted education entries."
+              },
+              "missing_fields": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "description": "Field not extracted."
+                },
+                "description": "Fields not found."
+              },
+              "processing_status": {
+                "type": "string",
+                "enum": [
+                  "success",
+                  "partial_success",
+                  "failed"
+                ]
+              }
+            },
+            "required": [
+              "document_id",
+              "name",
+              "email",
+              "phone",
+              "experience_years",
+              "skills",
+              "education",
+              "missing_fields",
+              "processing_status"
+            ],
+            "additionalProperties": false,
+            "description": "Extraction result. AI output is unverified and must not silently overwrite verified candidate records."
+          },
+          "description": "Extraction results per document."
+        }
+      },
+      "required": [
+        "extractions"
+      ],
+      "additionalProperties": false,
+      "description": "ai_automation module result payload."
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "document_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "successful_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "partial_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "description": "ai_automation processing summary."
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Machine-readable error code."
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable description."
+          },
+          "record_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Related record ID, if applicable."
+          },
+          "field": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Related field, if applicable."
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "additionalProperties": false,
+        "description": "A validation or processing issue."
+      },
+      "description": "Errors and warnings; empty array when none."
+    }
+  },
+  "required": [
+    "module",
+    "schema_version",
+    "run_id",
+    "status",
+    "created_at",
+    "data",
+    "summary",
+    "errors"
+  ],
+  "additionalProperties": false
+}

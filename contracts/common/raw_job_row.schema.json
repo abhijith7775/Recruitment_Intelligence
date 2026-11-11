@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raw Job CSV Row",
+  "description": "Raw jobs CSV row; all cells are text.",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "description": "Job ID text."
+    },
+    "role": {
+      "type": "string",
+      "description": "Role text."
+    },
+    "required_skills": {
+      "type": "string",
+      "description": "Semicolon-separated required skills."
+    },
+    "min_experience": {
+      "type": "string",
+      "description": "Minimum experience text."
+    },
+    "max_experience": {
+      "type": "string",
+      "description": "Maximum experience text."
+    }
+  },
+  "required": [
+    "job_id",
+    "role",
+    "required_skills",
+    "min_experience",
+    "max_experience"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Automation Input",
+  "description": "Optional resume extraction input. Document references are application-level inputs and are not present in the current cleaned CSV datasets.",
+  "type": "object",
+  "properties": {
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "description": "Stable document identifier assigned by application."
+          },
+          "file_name": {
+            "type": "string",
+            "description": "Original resume filename."
+          },
+          "mime_type": {
+            "type": "string",
+            "enum": [
+              "application/pdf",
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "application/msword",
+              "text/plain"
+            ]
+          },
+          "content_uri": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional internal storage reference; not a public URL."
+          },
+          "candidate_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Existing candidate ID if known."
+          }
+        },
+        "required": [
+          "document_id",
+          "file_name",
+          "mime_type"
+        ],
+        "additionalProperties": false,
+        "description": "Resume/document reference. This is a proposed extension because current CSV schema has no resume-file column."
+      },
+      "description": "Documents queued for extraction."
+    },
+    "extraction_config": {
+      "type": "object",
+      "properties": {
+        "extract_name": {
+          "type": "boolean"
+        },
+        "extract_contact": {
+          "type": "boolean"
+        },
+        "extract_experience": {
+          "type": "boolean"
+        },
+        "extract_skills": {
+          "type": "boolean"
+        },
+        "extract_education": {
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "description": "Optional extraction switches."
+    }
+  },
+  "required": [
+    "documents"
+  ],
+  "additionalProperties": false
+}

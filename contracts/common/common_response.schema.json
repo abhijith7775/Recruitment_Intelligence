@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Common Module Response Envelope",
+  "description": "Common outer structure for all module outputs. Module-specific results are inside data.",
+  "type": "object",
+  "properties": {
+    "module": {
+      "type": "string",
+      "enum": [
+        "data_preparation",
+        "matching",
+        "duplicate_detection",
+        "ai_automation",
+        "analytics"
+      ]
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Unique identifier for this execution."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "partial_success",
+        "failed"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO 8601 date-time with timezone.",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "object",
+      "description": "Module-specific result payload."
+    },
+    "summary": {
+      "type": "object",
+      "description": "Module-specific counts or summary."
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Machine-readable error code."
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable description."
+          },
+          "record_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Related record ID, if applicable."
+          },
+          "field": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Related field, if applicable."
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "additionalProperties": false,
+        "description": "A validation or processing issue."
+      },
+      "description": "Errors and warnings; empty array when none."
+    }
+  },
+  "required": [
+    "module",
+    "schema_version",
+    "run_id",
+    "status",
+    "created_at",
+    "data",
+    "summary",
+    "errors"
+  ],
+  "additionalProperties": false
+}

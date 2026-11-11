@@ -1,0 +1,38 @@
+{
+  "module": "analytics",
+  "schema_version": "0.1",
+  "run_id": "ANALYTICS-SAMPLE-001",
+  "status": "success",
+  "created_at": "2026-11-11T10:00:00+05:30",
+  "data": {
+    "generated_at": "2026-11-11T10:00:00+05:30",
+    "metrics": [
+      {
+        "metric_name": "candidate_total",
+        "label": "Total candidates",
+        "value": 0,
+        "unit": "count",
+        "description": "Number of candidate records in supplied input.",
+        "source_modules": [
+          "data_preparation"
+        ]
+      }
+    ],
+    "application_stage_counts": [],
+    "data_quality_notes": [
+      "Sample payload only; no source records supplied."
+    ],
+    "source_run_ids": {
+      "matching": null,
+      "duplicate_detection": null,
+      "ai_automation": null
+    }
+  },
+  "summary": {
+    "candidate_count": 0,
+    "job_count": 0,
+    "application_event_count": 0,
+    "metric_count": 1
+  },
+  "errors": []
+}

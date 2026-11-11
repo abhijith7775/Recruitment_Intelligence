@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Data Preparation Input",
+  "description": "Raw CSV row payload. CSV cells are strings; blank cells remain empty strings at ingestion.",
+  "type": "object",
+  "properties": {
+    "candidates": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Raw Candidate CSV Row",
+        "description": "Raw candidates CSV row; all cells are strings. Blank optional cells are empty strings.",
+        "type": "object",
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "description": "Candidate ID text."
+          },
+          "name": {
+            "type": "string",
+            "description": "Candidate name text."
+          },
+          "email": {
+            "type": "string",
+            "description": "Email text; may be blank."
+          },
+          "phone": {
+            "type": "string",
+            "description": "Phone text; may be blank."
+          },
+          "location": {
+            "type": "string",
+            "description": "Location text; may be blank."
+          },
+          "experience_years": {
+            "type": "string",
+            "description": "Experience text; may be blank."
+          },
+          "skills": {
+            "type": "string",
+            "description": "Semicolon-separated skill text."
+          },
+          "education": {
+            "type": "string",
+            "description": "Education text; may be blank."
+          },
+          "source": {
+            "type": "string",
+            "description": "Source text; may be blank."
+          },
+          "application_date": {
+            "type": "string",
+            "description": "Date text YYYY-MM-DD; may be blank."
+          }
+        },
+        "required": [
+          "candidate_id",
+          "name",
+          "email",
+          "phone",
+          "location",
+          "experience_years",
+          "skills",
+          "education",
+          "source",
+          "application_date"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Rows from candidates CSV."
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Raw Job CSV Row",
+        "description": "Raw jobs CSV row; all cells are text.",
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "description": "Job ID text."
+          },
+          "role": {
+            "type": "string",
+            "description": "Role text."
+          },
+          "required_skills": {
+            "type": "string",
+            "description": "Semicolon-separated required skills."
+          },
+          "min_experience": {
+            "type": "string",
+            "description": "Minimum experience text."
+          },
+          "max_experience": {
+            "type": "string",
+            "description": "Maximum experience text."
+          }
+        },
+        "required": [
+          "job_id",
+          "role",
+          "required_skills",
+          "min_experience",
+          "max_experience"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Rows from jobs CSV."
+    },
+    "applications": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Raw Application CSV Row",
+        "description": "Raw applications CSV row; all cells are text.",
+        "type": "object",
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "description": "Candidate ID text."
+          },
+          "job_id": {
+            "type": "string",
+            "description": "Job ID text."
+          },
+          "stage": {
+            "type": "string",
+            "description": "Application stage text."
+          },
+          "stage_date": {
+            "type": "string",
+            "description": "Stage date text YYYY-MM-DD."
+          },
+          "recruiter_id": {
+            "type": "string",
+            "description": "Recruiter ID text; may be blank."
+          }
+        },
+        "required": [
+          "candidate_id",
+          "job_id",
+          "stage",
+          "stage_date",
+          "recruiter_id"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Rows from applications CSV."
+    },
+    "activity": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Raw Activity CSV Row",
+        "description": "Raw activity CSV row; all cells are text.",
+        "type": "object",
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "description": "Candidate ID text."
+          },
+          "event_type": {
+            "type": "string",
+            "description": "Event type text; vocabulary pending approval."
+          },
+          "event_date": {
+            "type": "string",
+            "description": "Event date text YYYY-MM-DD."
+          }
+        },
+        "required": [
+          "candidate_id",
+          "event_type",
+          "event_date"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Rows from activity CSV."
+    },
+    "skill_dictionary": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Raw Skill Dictionary CSV Row",
+        "description": "Skill dictionary CSV row.",
+        "type": "object",
+        "properties": {
+          "original_skill": {
+            "type": "string",
+            "description": "Original skill text."
+          },
+          "canonical_skill": {
+            "type": "string",
+            "description": "Canonical skill text."
+          }
+        },
+        "required": [
+          "original_skill",
+          "canonical_skill"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Rows from skill_dictionary.csv."
+    }
+  },
+  "required": [
+    "candidates",
+    "jobs",
+    "applications",
+    "activity",
+    "skill_dictionary"
+  ],
+  "additionalProperties": false
+}

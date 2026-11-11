@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Job",
+  "description": "Normalized job record based on jobs_cleaned.csv.",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "description": "Stable job identifier, e.g. J001.",
+      "pattern": "^J[0-9]{3,}$"
+    },
+    "role": {
+      "type": "string",
+      "description": "Job role/title."
+    },
+    "required_skills": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Lowercase canonical skill name."
+      },
+      "description": "Required canonical skills."
+    },
+    "min_experience": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Minimum required experience in years."
+    },
+    "max_experience": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Maximum experience in years."
+    }
+  },
+  "required": [
+    "job_id",
+    "role",
+    "required_skills",
+    "min_experience",
+    "max_experience"
+  ],
+  "additionalProperties": false
+}

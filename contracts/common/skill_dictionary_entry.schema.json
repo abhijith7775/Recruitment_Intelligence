@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raw Skill Dictionary CSV Row",
+  "description": "Skill dictionary CSV row.",
+  "type": "object",
+  "properties": {
+    "original_skill": {
+      "type": "string",
+      "description": "Original skill text."
+    },
+    "canonical_skill": {
+      "type": "string",
+      "description": "Canonical skill text."
+    }
+  },
+  "required": [
+    "original_skill",
+    "canonical_skill"
+  ],
+  "additionalProperties": false
+}

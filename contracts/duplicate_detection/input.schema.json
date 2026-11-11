@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Duplicate Detection Input",
+  "description": "Consumes normalized candidates. Email and phone may be used for duplicate detection only, never matching.",
+  "type": "object",
+  "properties": {
+    "candidates": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Candidate",
+        "description": "Normalized candidate record based on candidates_cleaned.csv. Blank optional CSV values become JSON null.",
+        "type": "object",
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "description": "Stable candidate identifier, e.g. C001.",
+            "pattern": "^C[0-9]{3,}$"
+          },
+          "name": {
+            "type": "string",
+            "description": "Candidate name; required by the dataset."
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional email; duplicate review only, never a matching feature.",
+            "format": "email"
+          },
+          "phone": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional phone stored as text; duplicate review only, never a matching feature."
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional location; not used for matching."
+          },
+          "experience_years": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Non-negative experience in years.",
+            "minimum": 0
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "Lowercase canonical skill name."
+            },
+            "description": "Canonical skills array. CSV semicolon-separated skills are converted to an array."
+          },
+          "education": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional education information."
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional candidate source; not used for matching."
+          },
+          "application_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "ISO date YYYY-MM-DD.",
+            "format": "date"
+          }
+        },
+        "required": [
+          "candidate_id",
+          "name",
+          "experience_years",
+          "skills"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Normalized candidate records."
+    },
+    "detection_config": {
+      "type": "object",
+      "properties": {
+        "compare_email": {
+          "type": "boolean"
+        },
+        "compare_phone": {
+          "type": "boolean"
+        },
+        "similarity_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "description": "Optional comparison settings; omit unsupported settings."
+    }
+  },
+  "required": [
+    "candidates"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,51 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "C001",
+      "name": "Sample Candidate",
+      "email": "sample@example.com",
+      "phone": "",
+      "location": "",
+      "experience_years": "2",
+      "skills": "Python Programming; SQL Database",
+      "education": "",
+      "source": "Referral",
+      "application_date": "2026-11-01"
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "J001",
+      "role": "Python Developer",
+      "required_skills": "python; sql",
+      "min_experience": "1",
+      "max_experience": "4"
+    }
+  ],
+  "applications": [
+    {
+      "candidate_id": "C001",
+      "job_id": "J001",
+      "stage": "New",
+      "stage_date": "2026-11-01",
+      "recruiter_id": ""
+    }
+  ],
+  "activity": [
+    {
+      "candidate_id": "C001",
+      "event_type": "application_submitted",
+      "event_date": "2026-11-01"
+    }
+  ],
+  "skill_dictionary": [
+    {
+      "original_skill": "Python Programming",
+      "canonical_skill": "python"
+    },
+    {
+      "original_skill": "SQL Database",
+      "canonical_skill": "sql"
+    }
+  ]
+}

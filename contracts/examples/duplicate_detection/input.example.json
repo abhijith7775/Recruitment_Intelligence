@@ -1,0 +1,32 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "C001",
+      "name": "Sample Candidate",
+      "email": "sample@example.com",
+      "phone": null,
+      "location": null,
+      "experience_years": 2,
+      "skills": [
+        "python"
+      ],
+      "education": null,
+      "source": null,
+      "application_date": "2026-11-01"
+    },
+    {
+      "candidate_id": "C002",
+      "name": "Sample Candidate 2",
+      "email": "sample@example.com",
+      "phone": null,
+      "location": null,
+      "experience_years": 3,
+      "skills": [
+        "sql"
+      ],
+      "education": null,
+      "source": null,
+      "application_date": "2026-11-02"
+    }
+  ]
+}
