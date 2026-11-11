@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Activity",
+  "description": "Activity row based on activity_cleaned.csv. Event vocabulary is pending approval.",
+  "type": "object",
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Stable candidate identifier, e.g. C001.",
+      "pattern": "^C[0-9]{3,}$"
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Activity event type. Preserve source vocabulary until approved."
+    },
+    "event_date": {
+      "type": "string",
+      "description": "ISO date YYYY-MM-DD.",
+      "format": "date"
+    }
+  },
+  "required": [
+    "candidate_id",
+    "event_type",
+    "event_date"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Raw Candidate CSV Row",
+  "description": "Raw candidates CSV row; all cells are strings. Blank optional cells are empty strings.",
+  "type": "object",
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Candidate ID text."
+    },
+    "name": {
+      "type": "string",
+      "description": "Candidate name text."
+    },
+    "email": {
+      "type": "string",
+      "description": "Email text; may be blank."
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone text; may be blank."
+    },
+    "location": {
+      "type": "string",
+      "description": "Location text; may be blank."
+    },
+    "experience_years": {
+      "type": "string",
+      "description": "Experience text; may be blank."
+    },
+    "skills": {
+      "type": "string",
+      "description": "Semicolon-separated skill text."
+    },
+    "education": {
+      "type": "string",
+      "description": "Education text; may be blank."
+    },
+    "source": {
+      "type": "string",
+      "description": "Source text; may be blank."
+    },
+    "application_date": {
+      "type": "string",
+      "description": "Date text YYYY-MM-DD; may be blank."
+    }
+  },
+  "required": [
+    "candidate_id",
+    "name",
+    "email",
+    "phone",
+    "location",
+    "experience_years",
+    "skills",
+    "education",
+    "source",
+    "application_date"
+  ],
+  "additionalProperties": false
+}

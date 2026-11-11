@@ -1,0 +1,11 @@
+{
+  "documents": [
+    {
+      "document_id": "DOC001",
+      "file_name": "sample_resume.pdf",
+      "mime_type": "application/pdf",
+      "content_uri": "internal://sample/DOC001",
+      "candidate_id": "C001"
+    }
+  ]
+}

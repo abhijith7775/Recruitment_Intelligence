@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Duplicate Detection Output",
+  "description": "Prototype 0.1 output contract for duplicate_detection.",
+  "type": "object",
+  "properties": {
+    "module": {
+      "type": "string",
+      "const": "duplicate_detection"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "run_id": {
+      "type": "string",
+      "description": "Unique identifier for this execution."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "partial_success",
+        "failed"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "description": "ISO 8601 date-time with timezone.",
+      "format": "date-time"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "duplicate_pairs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pair_id": {
+                "type": "string",
+                "description": "Unique pair identifier within this run."
+              },
+              "candidate_id_1": {
+                "type": "string",
+                "description": "Stable candidate identifier, e.g. C001.",
+                "pattern": "^C[0-9]{3,}$"
+              },
+              "candidate_id_2": {
+                "type": "string",
+                "description": "Stable candidate identifier, e.g. C001.",
+                "pattern": "^C[0-9]{3,}$"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "type": "string",
+                      "enum": [
+                        "email",
+                        "phone",
+                        "name",
+                        "other"
+                      ]
+                    },
+                    "comparison_result": {
+                      "type": "string",
+                      "description": "Explanation of comparison result; avoid exposing raw personal data unnecessarily."
+                    },
+                    "confidence": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "description": "Optional confidence from 0 to 1."
+                    }
+                  },
+                  "required": [
+                    "field",
+                    "comparison_result"
+                  ],
+                  "additionalProperties": false,
+                  "description": "Evidence item."
+                },
+                "description": "Evidence supporting possible duplication."
+              },
+              "reason": {
+                "type": "string",
+                "enum": [
+                  "same_email",
+                  "same_phone",
+                  "similar_name",
+                  "multiple_fields",
+                  "other"
+                ]
+              },
+              "review_status": {
+                "type": "string",
+                "enum": [
+                  "Pending",
+                  "Confirmed",
+                  "Not Duplicate"
+                ]
+              },
+              "reviewer_id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Reviewer identifier after human review."
+              }
+            },
+            "required": [
+              "pair_id",
+              "candidate_id_1",
+              "candidate_id_2",
+              "evidence",
+              "reason",
+              "review_status"
+            ],
+            "additionalProperties": false,
+            "description": "Potential duplicate pair. Human review is required; do not merge or delete records."
+          },
+          "description": "Possible duplicate pairs requiring human review."
+        },
+        "records_without_comparable_contact": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Stable candidate identifier, e.g. C001.",
+            "pattern": "^C[0-9]{3,}$"
+          },
+          "description": "Candidate IDs for which no enabled contact comparison was possible."
+        }
+      },
+      "required": [
+        "duplicate_pairs",
+        "records_without_comparable_contact"
+      ],
+      "additionalProperties": false,
+      "description": "duplicate_detection module result payload."
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "candidate_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pair_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pending_review_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "description": "duplicate_detection processing summary."
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Machine-readable error code."
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable description."
+          },
+          "record_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Related record ID, if applicable."
+          },
+          "field": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Related field, if applicable."
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "additionalProperties": false,
+        "description": "A validation or processing issue."
+      },
+      "description": "Errors and warnings; empty array when none."
+    }
+  },
+  "required": [
+    "module",
+    "schema_version",
+    "run_id",
+    "status",
+    "created_at",
+    "data",
+    "summary",
+    "errors"
+  ],
+  "additionalProperties": false
+}

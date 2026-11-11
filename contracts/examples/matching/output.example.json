@@ -1,0 +1,35 @@
+{
+  "module": "matching",
+  "schema_version": "0.1",
+  "run_id": "MATCHING-SAMPLE-001",
+  "status": "success",
+  "created_at": "2026-11-11T10:00:00+05:30",
+  "data": {
+    "matches": [
+      {
+        "candidate_id": "C001",
+        "job_id": "J001",
+        "match_score": 90,
+        "match_status": "Good Match",
+        "matched_skills": [
+          "python",
+          "sql"
+        ],
+        "missing_skills": [],
+        "experience_comparison": {
+          "candidate_experience_years": 2,
+          "minimum_required_years": 1,
+          "maximum_preferred_years": 4,
+          "within_required_range": true
+        },
+        "explanation": "Sample only: both required skills are present and experience is within the configured range."
+      }
+    ],
+    "unscored_pairs": []
+  },
+  "summary": {
+    "evaluated_pair_count": 1,
+    "unscored_pair_count": 0
+  },
+  "errors": []
+}
