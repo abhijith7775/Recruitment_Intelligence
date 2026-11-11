@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Matching Input",
+  "description": "Consumes normalized candidates and jobs. Personal/contact fields may be present in candidate records but must not be used for matching or scoring.",
+  "type": "object",
+  "properties": {
+    "candidates": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Candidate",
+        "description": "Normalized candidate record based on candidates_cleaned.csv. Blank optional CSV values become JSON null.",
+        "type": "object",
+        "properties": {
+          "candidate_id": {
+            "type": "string",
+            "description": "Stable candidate identifier, e.g. C001.",
+            "pattern": "^C[0-9]{3,}$"
+          },
+          "name": {
+            "type": "string",
+            "description": "Candidate name; required by the dataset."
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional email; duplicate review only, never a matching feature.",
+            "format": "email"
+          },
+          "phone": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional phone stored as text; duplicate review only, never a matching feature."
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional location; not used for matching."
+          },
+          "experience_years": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Non-negative experience in years.",
+            "minimum": 0
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "Lowercase canonical skill name."
+            },
+            "description": "Canonical skills array. CSV semicolon-separated skills are converted to an array."
+          },
+          "education": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional education information."
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional candidate source; not used for matching."
+          },
+          "application_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "ISO date YYYY-MM-DD.",
+            "format": "date"
+          }
+        },
+        "required": [
+          "candidate_id",
+          "name",
+          "experience_years",
+          "skills"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Normalized candidate records."
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "title": "Job",
+        "description": "Normalized job record based on jobs_cleaned.csv.",
+        "type": "object",
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "description": "Stable job identifier, e.g. J001.",
+            "pattern": "^J[0-9]{3,}$"
+          },
+          "role": {
+            "type": "string",
+            "description": "Job role/title."
+          },
+          "required_skills": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "Lowercase canonical skill name."
+            },
+            "description": "Required canonical skills."
+          },
+          "min_experience": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Minimum required experience in years."
+          },
+          "max_experience": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Maximum experience in years."
+          }
+        },
+        "required": [
+          "job_id",
+          "role",
+          "required_skills",
+          "min_experience",
+          "max_experience"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Normalized job records."
+    },
+    "matching_config": {
+      "type": "object",
+      "properties": {
+        "good_match_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "partial_match_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "description": "Optional thresholds; if omitted, implementation defaults must be documented."
+    }
+  },
+  "required": [
+    "candidates",
+    "jobs"
+  ],
+  "additionalProperties": false
+}

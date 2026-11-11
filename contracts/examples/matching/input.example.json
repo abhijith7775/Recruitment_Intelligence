@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "C001",
+      "name": "Sample Candidate",
+      "email": null,
+      "phone": null,
+      "location": null,
+      "experience_years": 2,
+      "skills": [
+        "python",
+        "sql"
+      ],
+      "education": null,
+      "source": null,
+      "application_date": "2026-11-01"
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "J001",
+      "role": "Python Developer",
+      "required_skills": [
+        "python",
+        "sql"
+      ],
+      "min_experience": 1,
+      "max_experience": 4
+    }
+  ]
+}

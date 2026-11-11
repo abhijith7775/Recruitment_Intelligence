@@ -1,0 +1,49 @@
+Recruitment Intelligence — Data Preparation Summary
+Schema version: 1.1
+
+{
+  "schema_version": "1.1",
+  "processing_note": "Conservative cleanup only. Raw files were preserved. Missing values were not inferred or filled; duplicate records were flagged, not merged.",
+  "record_counts": {
+    "candidates": 73,
+    "jobs": 2,
+    "applications": 29,
+    "activity": 79
+  },
+  "missing_values": {
+    "candidates": {
+      "email": 1,
+      "phone": 51,
+      "location": 50,
+      "experience_years": 1,
+      "skills": 2,
+      "education": 12,
+      "application_date": 8
+    },
+    "jobs": {},
+    "applications": {},
+    "activity": {}
+  },
+  "duplicate_candidate_id_count": 0,
+  "duplicate_review_pairs": 2,
+  "application_reference_or_stage_errors": 0,
+  "activity_event_types_present": [
+    "application_rejected",
+    "application_submitted",
+    "candidate_shortlisted",
+    "interview_completed",
+    "resume_uploaded",
+    "screening_completed"
+  ],
+  "activity_vocabulary_status": "Pending project-lead approval",
+  "jobs_count": 2,
+  "job_count_note": "Two jobs are present; add more only if the project requires 3\u20135 jobs.",
+  "skill_dictionary_mappings": 5,
+  "skill_dictionary_note": "Existing five mappings retained; no unapproved mappings invented.",
+  "normalizations": [
+    "trimmed whitespace",
+    "lowercased and de-duplicated skill tokens",
+    "removed numeric phone suffix .0",
+    "formatted numeric experience values without unnecessary .0"
+  ]
+}
