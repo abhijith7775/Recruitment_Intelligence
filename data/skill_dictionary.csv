@@ -3,4 +3,80 @@ Python Programming,python
 PYTHON,python
 Django Framework,django
 SQL Database,sql
-Machine Learning,machine learning
+Machine Learning,machine_learning
+Git,git
+HTML,html
+CSS,css
+Excel,excel
+Power BI,power_bi
+Statistics,statistics
+Accounting,accounting
+Taxation,taxation
+Payroll,payroll
+Tableau,tableau
+Sales,sales
+CRM,crm
+Communication,communication
+Negotiation,negotiation
+Lead Generation,lead_generation
+Customer Service,customer_service
+Problem Solving,problem_solving
+Linux,linux
+Networking,networking
+Cybersecurity,cybersecurity
+Mechanical Design,mechanical_design
+AutoCAD,autocad
+SolidWorks,solidworks
+Manufacturing,manufacturing
+HR Recruitment,hr_recruitment
+Onboarding,onboarding
+Content Writing,content_writing
+SEO,seo
+Social Media,social_media
+Canva,canva
+Civil Engineering,civil_engineering
+Site Supervision,site_supervision
+Estimation,estimation
+Operations,operations
+Inventory,inventory
+Vendor Management,vendor_management
+
+C,c
+Flask,flask
+FastAPI,fastapi
+REST APIs,rest_apis
+NumPy,numpy
+Pandas,pandas
+GitHub,github
+Computer Vision,computer_vision
+OpenCV,opencv
+FaceNet,facenet
+MTCNN,mtcnn
+Deep Learning,deep_learning
+MySQL,mysql
+Scikit-learn,scikit_learn
+Supervised Learning,supervised_learning
+Linear Regression,linear_regression
+Logistic Regression,logistic_regression
+Decision Trees,decision_trees
+Random Forest,random_forest
+Naive Bayes,naive_bayes
+KNN,knn
+Gradient Boosting,gradient_boosting
+EDA,eda
+Data Preprocessing,data_preprocessing
+Matplotlib,matplotlib
+Seaborn,seaborn
+Java,java
+Flutter,flutter
+Dart,dart
+Firebase,firebase
+Data Cleaning,data_cleaning
+Data Visualization,data_visualization
+PHP,php
+SQLite,sqlite
+JavaScript,javascript
+C++,c++
+Photopea,photopea
+Generative AI,generative_ai
+Data Analysis,data_analysis
