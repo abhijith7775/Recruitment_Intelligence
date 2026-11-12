@@ -1,0 +1,44 @@
+{
+  "status": "success",
+  "data": {
+    "candidates": [
+      {
+        "candidate_id": "C001",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "phone": "555-0192",
+        "location": "New York",
+        "experience_years": 4.5,
+        "skills": ["Python", "Django", "SQL"],
+        "education": "B.S. Computer Science",
+        "source": "LinkedIn",
+        "application_date": "2026-11-01"
+      }
+    ],
+    "jobs": [
+      {
+        "job_id": "J001",
+        "role": "Backend Developer",
+        "required_skills": ["Python", "Django"],
+        "min_experience": 3,
+        "max_experience": 6
+      }
+    ],
+    "applications": [
+      {
+        "candidate_id": "C001",
+        "job_id": "J001",
+        "stage": "Screening",
+        "stage_date": "2026-11-02",
+        "recruiter_id": "R005"
+      }
+    ],
+    "activity": [
+      {
+        "candidate_id": "C001",
+        "event_type": "application_submitted",
+        "event_date": "2026-11-01"
+      }
+    ]
+  }
+}
