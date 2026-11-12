@@ -1,0 +1,50 @@
+{
+  "module": "duplicate_detection",
+  "schema_version": "0.1",
+  "run_id": "DUPLICATE-001",
+  "status": "success",
+  "created_at": "2026-11-12T10:47:12.567470+05:30",
+  "data": {
+    "duplicate_pairs": [
+      {
+        "pair_id": "PAIR001",
+        "candidate_id_1": "C004",
+        "candidate_id_2": "C005",
+        "evidence": [
+          {
+            "field": "email",
+            "comparison_result": "Normalized email values are equal.",
+            "confidence": 1.0
+          }
+        ],
+        "reason": "same_email",
+        "review_status": "Pending",
+        "reviewer_id": null
+      },
+      {
+        "pair_id": "PAIR002",
+        "candidate_id_1": "C007",
+        "candidate_id_2": "C008",
+        "evidence": [
+          {
+            "field": "phone",
+            "comparison_result": "Normalized phone values are equal.",
+            "confidence": 1.0
+          }
+        ],
+        "reason": "same_phone",
+        "review_status": "Pending",
+        "reviewer_id": null
+      }
+    ],
+    "records_without_comparable_contact": [
+      "C014"
+    ]
+  },
+  "summary": {
+    "candidate_count": 73,
+    "pair_count": 2,
+    "pending_review_count": 2
+  },
+  "errors": []
+}
