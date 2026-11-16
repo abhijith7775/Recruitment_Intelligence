@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Upload — AI Automation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .container {
+      width: 100%;
+      max-width: 580px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+    .header p {
+      font-size: 0.92rem;
+      color: #64748b;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+    .dropzone {
+      border: 2px dashed #94a3b8;
+      border-radius: 10px;
+      padding: 32px 20px;
+      text-align: center;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 20px;
+    }
+    .dropzone:hover, .dropzone:focus-within {
+      border-color: #2563eb;
+      background: #eff6ff;
+    }
+    .dropzone svg {
+      width: 44px;
+      height: 44px;
+      fill: none;
+      stroke: #3b82f6;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin-bottom: 12px;
+    }
+    .dropzone label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #1e293b;
+      cursor: pointer;
+      margin-bottom: 4px;
+    }
+    .dropzone .hint {
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+    input[type="file"] {
+      position: absolute;
+      opacity: 0;
+      width: 0.1px;
+      height: 0.1px;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .file-name-display {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2563eb;
+      word-break: break-all;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 9px;
+      padding: 13px 20px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.05s ease;
+      text-align: center;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+    }
+    .btn:active {
+      transform: scale(0.99);
+    }
+    .alert {
+      padding: 12px 16px;
+      border-radius: 9px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+      border: 1px solid;
+    }
+    .alert-error {
+      background: #fef2f2;
+      border-color: #fecaca;
+      color: #991b1b;
+    }
+    .alert-success {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .result-box {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+    }
+    .result-box h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .candidate-id-badge {
+      display: inline-block;
+      background: #1e293b;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px 14px;
+      font-size: 0.88rem;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .detail-label {
+      font-weight: 600;
+      color: #475569;
+    }
+    .detail-value {
+      color: #0f172a;
+      word-break: break-word;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+    .skill-pill {
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .empty-val {
+      color: #94a3b8;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Resume Upload</h1>
+      <p>Upload a candidate resume in PDF format to update the database</p>
+    </div>
+
+    {% if error_message %}
+      <div class="alert alert-error">
+        {{ error_message }}
+      </div>
+    {% endif %}
+
+    {% if success_message %}
+      <div class="alert alert-success">
+        {{ success_message }}
+      </div>
+    {% endif %}
+
+    <div class="card">
+      <form action="{{ url_for('upload_resume') }}" method="post" enctype="multipart/form-data">
+        <div class="dropzone" onclick="document.getElementById('resume-file').click();">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+          </svg>
+          <label for="resume-file">Click to browse or drop your PDF here</label>
+          <span class="hint">Supports PDF files only (.pdf)</span>
+          <div id="file-name" class="file-name-display"></div>
+        </div>
+        <input
+          type="file"
+          id="resume-file"
+          name="resume"
+          accept=".pdf,application/pdf"
+          required
+          onchange="updateFileName(this);"
+        />
+        <button type="submit" class="btn">Upload &amp; Extract Resume</button>
+      </form>
+
+      {% if extracted_candidate %}
+        <div class="result-box">
+          <h3>
+            Extracted Candidate Details
+            <span class="candidate-id-badge">{{ extracted_candidate.candidate_id }}</span>
+          </h3>
+          <div class="detail-grid">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">{{ extracted_candidate.name or '<span class="empty-val">Not found</span>'|safe }}</span>
+
+            <span class="detail-label">Email</span>
+            <span class="detail-value">{{ extracted_candidate.email or '<span class="empty-val">Not found</span>'|safe }}</span>
+
+            <span class="detail-label">Phone</span>
+            <span class="detail-value">{{ extracted_candidate.phone or '<span class="empty-val">Not found</span>'|safe }}</span>
+
+            <span class="detail-label">Location</span>
+            <span class="detail-value">{{ extracted_candidate.location or '<span class="empty-val">Not found</span>'|safe }}</span>
+
+            <span class="detail-label">Experience</span>
+            <span class="detail-value">
+              {% if extracted_candidate.experience_years != "" %}
+                {{ extracted_candidate.experience_years }} years
+              {% else %}
+                <span class="empty-val">Not specified</span>
+              {% endif %}
+            </span>
+
+            <span class="detail-label">Education</span>
+            <span class="detail-value">{{ extracted_candidate.education or '<span class="empty-val">Not found</span>'|safe }}</span>
+
+            <span class="detail-label">Skills</span>
+            <div class="detail-value">
+              {% if extracted_candidate.skills_list %}
+                <div class="skills-container">
+                  {% for sk in extracted_candidate.skills_list %}
+                    <span class="skill-pill">{{ sk }}</span>
+                  {% endfor %}
+                </div>
+              {% else %}
+                <span class="empty-val">No dictionary-matching skills found</span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    function updateFileName(input) {
+      const display = document.getElementById('file-name');
+      if (input.files && input.files.length > 0) {
+        display.textContent = input.files[0].name;
+      } else {
+        display.textContent = '';
+      }
+    }
+  </script>
+</body>
+</html>

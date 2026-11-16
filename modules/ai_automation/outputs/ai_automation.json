@@ -1,0 +1,153 @@
+{
+  "module": "ai_automation",
+  "schema_version": "0.1",
+  "run_id": "AI_AUTOMATION-20261116-185540-1C5F5C",
+  "status": "success",
+  "created_at": "2026-11-16T18:55:40+05:30",
+  "data": {
+    "extractions": [
+      {
+        "document_id": "DOC_7C81A1F2",
+        "candidate_id": "C084",
+        "name": {
+          "value": "Devika K J",
+          "confidence": 0.96,
+          "source_text": "DEVIKA K J",
+          "review_required": false
+        },
+        "email": {
+          "value": "devikajijith2004@gmail.com",
+          "confidence": 0.98,
+          "source_text": "devikajijith2004@gmail.com",
+          "review_required": false
+        },
+        "phone": {
+          "value": "+91 8089118175",
+          "confidence": 0.94,
+          "source_text": "+918089118175",
+          "review_required": false
+        },
+        "experience_years": {
+          "value": 0,
+          "confidence": 0.9,
+          "source_text": "entry level",
+          "review_required": false
+        },
+        "skills": [
+          {
+            "skill": "Logistic Regression",
+            "canonical_skill": "logistic_regression",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Problem-Solving",
+            "canonical_skill": "problem_solving",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Random Forest",
+            "canonical_skill": "random_forest",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Data Analysis",
+            "canonical_skill": "data_analysis",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Power Bi",
+            "canonical_skill": "power_bi",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Rest Api",
+            "canonical_skill": "rest_apis",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Communication",
+            "canonical_skill": "communication",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Javascript",
+            "canonical_skill": "javascript",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Github",
+            "canonical_skill": "github",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Pandas",
+            "canonical_skill": "pandas",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Python",
+            "canonical_skill": "python",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Excel",
+            "canonical_skill": "excel",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Mysql",
+            "canonical_skill": "mysql",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Flask",
+            "canonical_skill": "flask",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "Html",
+            "canonical_skill": "html",
+            "confidence": 0.95,
+            "review_required": false
+          },
+          {
+            "skill": "CSS",
+            "canonical_skill": "css",
+            "confidence": 0.95,
+            "review_required": false
+          }
+        ],
+        "education": [
+          {
+            "value": "B.Tech in Computer Science and Engineering, Data Science (CGPA: 7.5/10)",
+            "confidence": 0.92,
+            "review_required": false
+          }
+        ],
+        "missing_fields": [],
+        "processing_status": "success"
+      }
+    ]
+  },
+  "summary": {
+    "document_count": 1,
+    "successful_count": 1,
+    "partial_count": 0,
+    "failed_count": 0
+  },
+  "errors": []
+}
