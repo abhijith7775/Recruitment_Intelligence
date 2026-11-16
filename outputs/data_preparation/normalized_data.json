@@ -1,0 +1,2042 @@
+{
+    "module": "data_preparation",
+    "schema_version": "0.1",
+    "run_id": "f0e48234-6314-484b-9762-0957f86851f2",
+    "status": "partial_success",
+    "created_at": "2026-11-16T05:43:55.618349+00:00",
+    "data": {
+        "candidates": [
+            {
+                "candidate_id": "C001",
+                "name": "Aarav Menon",
+                "email": "aarav.menon@example.com",
+                "phone": "910000000001",
+                "location": "Kochi",
+                "experience_years": 2.0,
+                "skills": [
+                    "python",
+                    "django",
+                    "sql",
+                    "git",
+                    "html",
+                    "css"
+                ],
+                "education": "BSc Computer Science",
+                "source": "Job_Portal",
+                "application_date": "2026-10-14"
+            },
+            {
+                "candidate_id": "C002",
+                "name": "Diya Nair",
+                "email": "diya.nair@example.com",
+                "phone": "910000000002",
+                "location": "Thiruvananthapuram",
+                "experience_years": 1.0,
+                "skills": [
+                    "python",
+                    "sql",
+                    "excel",
+                    "power_bi"
+                ],
+                "education": "BCom",
+                "source": "LinkedIn",
+                "application_date": "2026-10-16"
+            },
+            {
+                "candidate_id": "C003",
+                "name": "Rohan Das",
+                "email": "rohan.das@example.com",
+                "phone": "910000000003",
+                "location": "Bengaluru",
+                "experience_years": 3.0,
+                "skills": [
+                    "excel",
+                    "sql",
+                    "python",
+                    "power_bi",
+                    "statistics"
+                ],
+                "education": "MSc Statistics",
+                "source": "Company_Website",
+                "application_date": "2026-10-16"
+            },
+            {
+                "candidate_id": "C004",
+                "name": "Maya Thomas",
+                "email": "maya.nair@example.com",
+                "phone": "910000000004",
+                "location": "Thrissur",
+                "experience_years": 4.0,
+                "skills": [
+                    "accounting",
+                    "excel",
+                    "taxation",
+                    "payroll"
+                ],
+                "education": "BCom Finance",
+                "source": "Employee_Referral",
+                "application_date": "2026-10-18"
+            },
+            {
+                "candidate_id": "C005",
+                "name": "Nikhil Varma",
+                "email": "maya.nair@example.com",
+                "phone": "910000000005",
+                "location": "Kozhikode",
+                "experience_years": 2.0,
+                "skills": [
+                    "python",
+                    "django",
+                    "sql",
+                    "git"
+                ],
+                "education": "BTech Information Technology",
+                "source": "Job_Portal",
+                "application_date": "2026-10-18"
+            },
+            {
+                "candidate_id": "C006",
+                "name": "Ananya Pillai",
+                "email": "ananya.pillai@example.com",
+                "phone": "910000000006",
+                "location": "Kochi",
+                "experience_years": 2.0,
+                "skills": [
+                    "excel",
+                    "sql",
+                    "python",
+                    "power_bi",
+                    "tableau"
+                ],
+                "education": "BBA",
+                "source": "LinkedIn",
+                "application_date": "2026-10-19"
+            },
+            {
+                "candidate_id": "C007",
+                "name": "Ishan Joseph",
+                "email": "ishan.joseph@example.com",
+                "phone": "910000000007",
+                "location": "Chennai",
+                "experience_years": 5.0,
+                "skills": [
+                    "sales",
+                    "crm",
+                    "communication",
+                    "negotiation",
+                    "lead_generation"
+                ],
+                "education": "BA English",
+                "source": "Employee_Referral",
+                "application_date": "2026-10-20"
+            },
+            {
+                "candidate_id": "C008",
+                "name": "Sara Khan",
+                "email": "sara.khan@example.com",
+                "phone": "910000000007",
+                "location": "Hyderabad",
+                "experience_years": 3.0,
+                "skills": [
+                    "customer_service",
+                    "crm",
+                    "communication",
+                    "problem_solving"
+                ],
+                "education": "Diploma Customer Relations",
+                "source": "Job_Portal",
+                "application_date": "2026-10-20"
+            },
+            {
+                "candidate_id": "C009",
+                "name": "Neeraj Kumar",
+                "email": "neeraj.kumar@example.com",
+                "phone": "910000000009",
+                "location": "Coimbatore",
+                "experience_years": null,
+                "skills": [
+                    "python",
+                    "linux",
+                    "networking",
+                    "cybersecurity"
+                ],
+                "education": "BSc Information Technology",
+                "source": "Campus_Placement",
+                "application_date": "2026-10-21"
+            },
+            {
+                "candidate_id": "C010",
+                "name": "Meera Roy",
+                "email": "meera.roy@example.com",
+                "phone": "910000000010",
+                "location": "Kochi",
+                "experience_years": 1.0,
+                "skills": [],
+                "education": "BA Visual Arts",
+                "source": "Company_Website",
+                "application_date": "2026-10-22"
+            },
+            {
+                "candidate_id": "C011",
+                "name": "Vivek Shah",
+                "email": "vivek.shah@example.com",
+                "phone": "910000000011",
+                "location": "Pune",
+                "experience_years": 6.0,
+                "skills": [
+                    "mechanical_design",
+                    "autocad",
+                    "solidworks",
+                    "manufacturing"
+                ],
+                "education": "Diploma Mechanical Engineering",
+                "source": "Job_Portal",
+                "application_date": "2026-10-23"
+            },
+            {
+                "candidate_id": "C012",
+                "name": "Fatima Ali",
+                "email": "fatima.ali@example.com",
+                "phone": "910000000012",
+                "location": "Kochi",
+                "experience_years": 2.0,
+                "skills": [
+                    "hr_recruitment",
+                    "onboarding",
+                    "communication",
+                    "excel"
+                ],
+                "education": "MBA Human Resources",
+                "source": "LinkedIn",
+                "application_date": "2026-10-24"
+            },
+            {
+                "candidate_id": "C013",
+                "name": "Kiran Suresh",
+                "email": "kiran.suresh@example.com",
+                "phone": "910000000013",
+                "location": "Mysuru",
+                "experience_years": 0.0,
+                "skills": [
+                    "content_writing",
+                    "seo",
+                    "social_media",
+                    "canva"
+                ],
+                "education": "BA Journalism",
+                "source": "Campus_Placement",
+                "application_date": "2026-10-25"
+            },
+            {
+                "candidate_id": "C014",
+                "name": "Arjun Paul",
+                "email": null,
+                "phone": null,
+                "location": "Palakkad",
+                "experience_years": 7.0,
+                "skills": [
+                    "civil_engineering",
+                    "autocad",
+                    "site_supervision",
+                    "estimation"
+                ],
+                "education": "BTech Civil Engineering",
+                "source": "Employee_Referral",
+                "application_date": "2026-10-26"
+            },
+            {
+                "candidate_id": "C015",
+                "name": "Leena George",
+                "email": "leena.george@example.com",
+                "phone": "910000000015",
+                "location": "Kollam",
+                "experience_years": 3.0,
+                "skills": [
+                    "operations",
+                    "inventory",
+                    "excel",
+                    "vendor_management"
+                ],
+                "education": "BBA Operations",
+                "source": "Job_Portal",
+                "application_date": "2026-10-27"
+            },
+            {
+                "candidate_id": "C016",
+                "name": "Aarav Menon",
+                "email": "candidate001@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "communication",
+                    "git",
+                    "inventory",
+                    "problem_solving",
+                    "python",
+                    "sql"
+                ],
+                "education": "B.Tech Computer Science",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C017",
+                "name": "Isha Nair",
+                "email": "candidate002@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "sql"
+                ],
+                "education": "B.Sc. Computer Science",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C018",
+                "name": "Rohan Kulkarni",
+                "email": "candidate003@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "communication",
+                    "customer_service",
+                    "networking"
+                ],
+                "education": "Diploma in Information Technology",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C019",
+                "name": "Meera Iyer",
+                "email": "candidate004@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "communication",
+                    "cybersecurity",
+                    "linux",
+                    "problem_solving"
+                ],
+                "education": "B.Tech Information Technology",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C020",
+                "name": "Kabir Shah",
+                "email": "candidate005@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "linux",
+                    "networking"
+                ],
+                "education": "B.Tech Computer Science",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C021",
+                "name": "Ananya Pillai",
+                "email": "candidate006@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "excel",
+                    "power_bi",
+                    "python",
+                    "sales",
+                    "sql",
+                    "statistics"
+                ],
+                "education": "B.Sc. Statistics",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C022",
+                "name": "Dev Malhotra",
+                "email": "candidate007@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "operations",
+                    "power_bi",
+                    "problem_solving",
+                    "sql"
+                ],
+                "education": "B.Com. Finance",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C023",
+                "name": "Sana Thomas",
+                "email": "candidate008@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "machine_learning",
+                    "python",
+                    "statistics"
+                ],
+                "education": "M.Sc. Data Science",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C024",
+                "name": "Arjun Desai",
+                "email": "candidate009@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "machine_learning",
+                    "python"
+                ],
+                "education": "B.Tech Artificial Intelligence",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C025",
+                "name": "Nisha Rao",
+                "email": "candidate010@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "communication",
+                    "git",
+                    "problem_solving",
+                    "python",
+                    "sql"
+                ],
+                "education": "B.Tech Information Systems",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C026",
+                "name": "Vikram Joshi",
+                "email": "candidate011@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "accounting",
+                    "excel"
+                ],
+                "education": "B.Com. Accounting",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C027",
+                "name": "Diya Krishnan",
+                "email": "candidate012@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "accounting",
+                    "excel",
+                    "power_bi"
+                ],
+                "education": "MBA Finance",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C028",
+                "name": "Rahul Kapoor",
+                "email": "candidate013@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "accounting",
+                    "communication",
+                    "excel",
+                    "operations",
+                    "problem_solving"
+                ],
+                "education": "B.Com. Commerce",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C029",
+                "name": "Aditi Varma",
+                "email": "candidate014@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "accounting",
+                    "excel",
+                    "operations",
+                    "payroll"
+                ],
+                "education": "B.Com. Business Administration",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C030",
+                "name": "Neil Fernandes",
+                "email": "candidate015@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "accounting",
+                    "excel"
+                ],
+                "education": "Internal Audit Associate | Finance & Accounting | Senior",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C031",
+                "name": "Priya Shetty",
+                "email": "candidate016@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "onboarding",
+                    "problem_solving"
+                ],
+                "education": "MBA Human Resources",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C032",
+                "name": "Karan Bhat",
+                "email": "candidate017@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "communication",
+                    "excel"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C033",
+                "name": "Maya Chatterjee",
+                "email": "candidate018@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "excel",
+                    "operations"
+                ],
+                "education": "Employee Data Quality Review: Audited a synthetic employee master file for missing fields, duplicate IDs and inconsistent department",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C034",
+                "name": "Aditya Bose",
+                "email": "candidate019@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "problem_solving"
+                ],
+                "education": "BA English",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C035",
+                "name": "Tara Reddy",
+                "email": "candidate020@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "communication",
+                    "customer_service",
+                    "excel"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C036",
+                "name": "Sameer Khan",
+                "email": "candidate021@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "crm",
+                    "excel",
+                    "lead_generation",
+                    "negotiation",
+                    "sales"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C037",
+                "name": "Lavanya Das",
+                "email": "candidate022@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "problem_solving",
+                    "sales"
+                ],
+                "education": "MBA Marketing",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C038",
+                "name": "Harish Nambiar",
+                "email": "candidate023@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "canva",
+                    "sales",
+                    "social_media"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C039",
+                "name": "Pooja Mehta",
+                "email": "candidate024@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "communication",
+                    "sales",
+                    "seo"
+                ],
+                "education": "BA Mass Communication",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C040",
+                "name": "Yash Patil",
+                "email": "candidate025@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "problem_solving",
+                    "sales"
+                ],
+                "education": "Market Research Associate | Sales & Marketing | Senior",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C041",
+                "name": "Neha Mathew",
+                "email": "candidate026@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "excel",
+                    "operations"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C042",
+                "name": "Siddharth Jain",
+                "email": "candidate027@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "inventory",
+                    "operations"
+                ],
+                "education": "B.Com. Logistics",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C043",
+                "name": "Kavya Menon",
+                "email": "candidate028@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "inventory",
+                    "operations",
+                    "power_bi",
+                    "problem_solving",
+                    "sql"
+                ],
+                "education": "MBA Supply Chain Management",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C044",
+                "name": "Farhan Ali",
+                "email": "candidate029@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "excel",
+                    "negotiation",
+                    "operations"
+                ],
+                "education": "Procurement Associate | Operations & Supply Chain | Mid-level",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C045",
+                "name": "Ritika Sinha",
+                "email": "candidate030@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "excel",
+                    "inventory",
+                    "operations"
+                ],
+                "education": "Diploma in Supply Chain Operations",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C046",
+                "name": "Manav Gupta",
+                "email": "candidate031@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "communication",
+                    "crm",
+                    "customer_service",
+                    "excel",
+                    "problem_solving"
+                ],
+                "education": "Customer Support Associate | Customer Service | Entry-level",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C047",
+                "name": "Anjali D'Souza",
+                "email": "candidate032@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "crm",
+                    "customer_service",
+                    "excel",
+                    "onboarding"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C048",
+                "name": "Nikhil Roy",
+                "email": "candidate033@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "customer_service"
+                ],
+                "education": "Diploma in Computer Applications",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C049",
+                "name": "Sreya Balakrishnan",
+                "email": "candidate034@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "communication",
+                    "crm",
+                    "customer_service",
+                    "excel",
+                    "problem_solving"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C050",
+                "name": "Varun Mishra",
+                "email": "candidate035@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "customer_service",
+                    "excel",
+                    "power_bi",
+                    "sql"
+                ],
+                "education": "M.Sc. Psychology",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C051",
+                "name": "Amrita Sen",
+                "email": "candidate036@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "canva",
+                    "communication"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C052",
+                "name": "Joel George",
+                "email": "candidate037@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "communication",
+                    "problem_solving"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C053",
+                "name": "Rhea Mukherjee",
+                "email": "candidate038@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [],
+                "education": "UX Research Associate | Design & Content | Mid-level",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C054",
+                "name": "Akash Verma",
+                "email": "candidate039@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "seo"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C055",
+                "name": "Swathi Krishnan",
+                "email": "candidate040@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "communication",
+                    "problem_solving"
+                ],
+                "education": "Diploma in Multimedia",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C056",
+                "name": "Pranav Rao",
+                "email": "candidate041@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "autocad",
+                    "excel",
+                    "manufacturing",
+                    "mechanical_design",
+                    "problem_solving",
+                    "solidworks"
+                ],
+                "education": "B.Tech Mechanical Engineering",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C057",
+                "name": "Simran Kaur",
+                "email": "candidate042@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "autocad",
+                    "excel",
+                    "manufacturing"
+                ],
+                "education": "B.Tech Electrical Engineering",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C058",
+                "name": "Deepak Nair",
+                "email": "candidate043@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "manufacturing",
+                    "problem_solving"
+                ],
+                "education": "B.Tech Industrial Engineering",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C059",
+                "name": "Aparna Kulkarni",
+                "email": "candidate044@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "communication",
+                    "excel",
+                    "manufacturing"
+                ],
+                "education": "Diploma in Mechanical Engineering",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C060",
+                "name": "Zoya Ahmed",
+                "email": "candidate045@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "excel",
+                    "manufacturing"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C061",
+                "name": "Ritesh Sharma",
+                "email": "candidate046@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 0.0,
+                "skills": [
+                    "autocad",
+                    "civil_engineering",
+                    "communication",
+                    "estimation",
+                    "excel",
+                    "problem_solving",
+                    "site_supervision"
+                ],
+                "education": "B.Tech Civil Engineering",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C062",
+                "name": "Keerthi Das",
+                "email": "candidate047@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 1.0,
+                "skills": [
+                    "autocad",
+                    "civil_engineering",
+                    "excel"
+                ],
+                "education": "Diploma in Civil Engineering",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C063",
+                "name": "Ibrahim K P",
+                "email": "candidate048@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 3.0,
+                "skills": [
+                    "autocad",
+                    "civil_engineering",
+                    "estimation",
+                    "excel"
+                ],
+                "education": "B.Tech Civil Engineering",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C064",
+                "name": "Mitali Ghosh",
+                "email": "candidate049@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 5.0,
+                "skills": [
+                    "autocad",
+                    "communication",
+                    "problem_solving"
+                ],
+                "education": "Diploma in Civil CAD",
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C065",
+                "name": "Sanjay Pillai",
+                "email": "candidate050@example.test",
+                "phone": null,
+                "location": null,
+                "experience_years": 8.0,
+                "skills": [
+                    "excel"
+                ],
+                "education": null,
+                "source": "PDF_Upload",
+                "application_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C066",
+                "name": "Adhill C",
+                "email": "adhilc8848@gmail.com",
+                "phone": "8848706914",
+                "location": "Kochi, Kerala",
+                "experience_years": 0.4,
+                "skills": [
+                    "python",
+                    "c",
+                    "html",
+                    "css",
+                    "flask",
+                    "fastapi",
+                    "rest_apis",
+                    "sql",
+                    "numpy",
+                    "pandas",
+                    "git",
+                    "github",
+                    "machine_learning",
+                    "computer_vision",
+                    "opencv",
+                    "facenet",
+                    "mtcnn",
+                    "deep_learning"
+                ],
+                "education": "B.Tech Computer Science and Engineering (AI & ML)",
+                "source": "Resume_Upload",
+                "application_date": null
+            },
+            {
+                "candidate_id": "C067",
+                "name": "Abhishek S",
+                "email": "abhishekskumar27@gmail.com",
+                "phone": "9778775595",
+                "location": "Kollam, Kerala",
+                "experience_years": 0.0,
+                "skills": [
+                    "python",
+                    "html",
+                    "css",
+                    "mysql",
+                    "scikit_learn",
+                    "supervised_learning",
+                    "linear_regression",
+                    "logistic_regression",
+                    "decision_trees",
+                    "random_forest",
+                    "naive_bayes",
+                    "knn",
+                    "gradient_boosting",
+                    "pandas",
+                    "numpy",
+                    "eda",
+                    "data_preprocessing",
+                    "matplotlib",
+                    "seaborn",
+                    "power_bi",
+                    "flask",
+                    "java",
+                    "flutter",
+                    "dart",
+                    "firebase"
+                ],
+                "education": "B.Tech Computer Science and Engineering",
+                "source": "Resume_Upload",
+                "application_date": null
+            },
+            {
+                "candidate_id": "C068",
+                "name": "Nimitha Josy",
+                "email": "nimithajosy11@gmail.com",
+                "phone": "7034680835",
+                "location": "Kochi, Kerala",
+                "experience_years": 0.0,
+                "skills": [
+                    "python",
+                    "sql",
+                    "mysql",
+                    "data_cleaning",
+                    "data_preprocessing",
+                    "eda",
+                    "data_visualization",
+                    "power_bi",
+                    "matplotlib",
+                    "seaborn",
+                    "pandas",
+                    "numpy",
+                    "machine_learning",
+                    "html",
+                    "css",
+                    "flask",
+                    "django",
+                    "php"
+                ],
+                "education": "Bachelor of Computer Applications",
+                "source": "Resume_Upload",
+                "application_date": null
+            },
+            {
+                "candidate_id": "C069",
+                "name": "Nandana PS",
+                "email": "nandanasrini@gmail.com",
+                "phone": "8891826697",
+                "location": "Kochi, Kerala",
+                "experience_years": 0.5,
+                "skills": [
+                    "python",
+                    "sql",
+                    "mysql",
+                    "excel",
+                    "power_bi",
+                    "tableau",
+                    "numpy",
+                    "pandas",
+                    "data_cleaning",
+                    "data_analysis",
+                    "data_visualization",
+                    "machine_learning",
+                    "flask",
+                    "html",
+                    "css",
+                    "django",
+                    "sqlite"
+                ],
+                "education": "Bachelor of Computer Applications",
+                "source": "Resume_Upload",
+                "application_date": null
+            },
+            {
+                "candidate_id": "C070",
+                "name": "Yuktha Rajeev",
+                "email": "yuktharajeev2004@gmail.com",
+                "phone": "8921344062",
+                "location": "Kochi, Kerala",
+                "experience_years": 0.5,
+                "skills": [
+                    "python",
+                    "sql",
+                    "mysql",
+                    "excel",
+                    "power_bi",
+                    "tableau",
+                    "numpy",
+                    "pandas",
+                    "data_cleaning",
+                    "data_analysis",
+                    "data_visualization",
+                    "machine_learning",
+                    "flask",
+                    "html",
+                    "css",
+                    "django",
+                    "sqlite",
+                    "scikit_learn"
+                ],
+                "education": "Bachelor of Computer Applications",
+                "source": "Resume_Upload",
+                "application_date": null
+            },
+            {
+                "candidate_id": "C071",
+                "name": "Megha Satheesh",
+                "email": "meghasatheesh20005@gmail.com",
+                "phone": "9061247615",
+                "location": "Ernakulam, Kerala",
+                "experience_years": 0.0,
+                "skills": [
+                    "python",
+                    "sql",
+                    "mysql",
+                    "excel",
+                    "power_bi",
+                    "pandas",
+                    "numpy",
+                    "matplotlib",
+                    "seaborn",
+                    "data_cleaning",
+                    "data_preprocessing",
+                    "eda",
+                    "data_visualization",
+                    "machine_learning",
+                    "flask",
+                    "html",
+                    "css",
+                    "javascript",
+                    "django"
+                ],
+                "education": "Bachelor of Computer Applications",
+                "source": "Resume_Upload",
+                "application_date": null
+            },
+            {
+                "candidate_id": "C072",
+                "name": "Angelo Helen Jaison",
+                "email": "angelohelen756@gmail.com",
+                "phone": "8156816805",
+                "location": "Kochi, Kerala",
+                "experience_years": 0.0,
+                "skills": [
+                    "python",
+                    "c++",
+                    "sql",
+                    "mysql",
+                    "excel",
+                    "power_bi",
+                    "tableau",
+                    "matplotlib",
+                    "seaborn",
+                    "numpy",
+                    "pandas",
+                    "html",
+                    "css",
+                    "flask",
+                    "canva",
+                    "photopea",
+                    "machine_learning",
+                    "generative_ai",
+                    "data_analysis",
+                    "data_visualization"
+                ],
+                "education": "Bachelor of Computer Applications",
+                "source": "Resume_Upload",
+                "application_date": null
+            },
+            {
+                "candidate_id": "C073",
+                "name": "Sivakami P.S",
+                "email": "sivakamisalijan05@gmail.com",
+                "phone": "6282809731",
+                "location": "Kochi, Kerala",
+                "experience_years": 0.0,
+                "skills": [
+                    "python",
+                    "sql",
+                    "mysql",
+                    "excel",
+                    "power_bi",
+                    "matplotlib",
+                    "seaborn",
+                    "pandas",
+                    "numpy",
+                    "data_cleaning",
+                    "data_preprocessing",
+                    "eda",
+                    "data_visualization",
+                    "machine_learning",
+                    "html",
+                    "css",
+                    "flask"
+                ],
+                "education": "Bachelor of Computer Applications",
+                "source": "Resume_Upload",
+                "application_date": null
+            }
+        ],
+        "jobs": [
+            {
+                "job_id": "J001",
+                "role": "Python Developer",
+                "required_skills": [
+                    "python",
+                    "django",
+                    "sql",
+                    "git"
+                ],
+                "min_experience": 1,
+                "max_experience": 4
+            },
+            {
+                "job_id": "J002",
+                "role": "Data Analyst",
+                "required_skills": [
+                    "excel",
+                    "sql",
+                    "python",
+                    "power_bi"
+                ],
+                "min_experience": 0,
+                "max_experience": 3
+            }
+        ],
+        "applications": [
+            {
+                "candidate_id": "C001",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-14",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C001",
+                "job_id": "J001",
+                "stage": "Screened",
+                "stage_date": "2026-10-15",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C001",
+                "job_id": "J001",
+                "stage": "Shortlisted",
+                "stage_date": "2026-10-18",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C001",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-30",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C002",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-16",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C002",
+                "job_id": "J001",
+                "stage": "Screened",
+                "stage_date": "2026-10-19",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C002",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-21",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C003",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-16",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C003",
+                "job_id": "J002",
+                "stage": "Screened",
+                "stage_date": "2026-10-20",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C004",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-18",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C004",
+                "job_id": "J002",
+                "stage": "Rejected",
+                "stage_date": "2026-10-22",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C005",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-18",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C005",
+                "job_id": "J001",
+                "stage": "Screened",
+                "stage_date": "2026-10-21",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C006",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-19",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C006",
+                "job_id": "J002",
+                "stage": "Shortlisted",
+                "stage_date": "2026-10-23",
+                "recruiter_id": "R003"
+            },
+            {
+                "candidate_id": "C006",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-31",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C007",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-20",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C008",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-20",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C008",
+                "job_id": "J002",
+                "stage": "Screened",
+                "stage_date": "2026-10-24",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C008",
+                "job_id": "J002",
+                "stage": "Interviewed",
+                "stage_date": "2026-10-28",
+                "recruiter_id": "R003"
+            },
+            {
+                "candidate_id": "C009",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-21",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C010",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-22",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C011",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-23",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C011",
+                "job_id": "J001",
+                "stage": "Screened",
+                "stage_date": "2026-10-25",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C012",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-24",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C013",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-25",
+                "recruiter_id": "R003"
+            },
+            {
+                "candidate_id": "C014",
+                "job_id": "J001",
+                "stage": "New",
+                "stage_date": "2026-10-26",
+                "recruiter_id": "R001"
+            },
+            {
+                "candidate_id": "C015",
+                "job_id": "J002",
+                "stage": "New",
+                "stage_date": "2026-10-27",
+                "recruiter_id": "R002"
+            },
+            {
+                "candidate_id": "C015",
+                "job_id": "J002",
+                "stage": "Screened",
+                "stage_date": "2026-10-30",
+                "recruiter_id": "R002"
+            }
+        ],
+        "activity": [
+            {
+                "candidate_id": "C001",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-14"
+            },
+            {
+                "candidate_id": "C001",
+                "event_type": "screening_completed",
+                "event_date": "2026-10-15"
+            },
+            {
+                "candidate_id": "C002",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-16"
+            },
+            {
+                "candidate_id": "C003",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-16"
+            },
+            {
+                "candidate_id": "C001",
+                "event_type": "candidate_shortlisted",
+                "event_date": "2026-10-18"
+            },
+            {
+                "candidate_id": "C004",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-18"
+            },
+            {
+                "candidate_id": "C005",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-18"
+            },
+            {
+                "candidate_id": "C002",
+                "event_type": "screening_completed",
+                "event_date": "2026-10-19"
+            },
+            {
+                "candidate_id": "C006",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-19"
+            },
+            {
+                "candidate_id": "C003",
+                "event_type": "screening_completed",
+                "event_date": "2026-10-20"
+            },
+            {
+                "candidate_id": "C007",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-20"
+            },
+            {
+                "candidate_id": "C008",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-20"
+            },
+            {
+                "candidate_id": "C002",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-21"
+            },
+            {
+                "candidate_id": "C005",
+                "event_type": "screening_completed",
+                "event_date": "2026-10-21"
+            },
+            {
+                "candidate_id": "C009",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-21"
+            },
+            {
+                "candidate_id": "C004",
+                "event_type": "application_rejected",
+                "event_date": "2026-10-22"
+            },
+            {
+                "candidate_id": "C010",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-22"
+            },
+            {
+                "candidate_id": "C006",
+                "event_type": "candidate_shortlisted",
+                "event_date": "2026-10-23"
+            },
+            {
+                "candidate_id": "C011",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-23"
+            },
+            {
+                "candidate_id": "C008",
+                "event_type": "screening_completed",
+                "event_date": "2026-10-24"
+            },
+            {
+                "candidate_id": "C012",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-24"
+            },
+            {
+                "candidate_id": "C011",
+                "event_type": "screening_completed",
+                "event_date": "2026-10-25"
+            },
+            {
+                "candidate_id": "C013",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-25"
+            },
+            {
+                "candidate_id": "C014",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-26"
+            },
+            {
+                "candidate_id": "C015",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-27"
+            },
+            {
+                "candidate_id": "C008",
+                "event_type": "interview_completed",
+                "event_date": "2026-10-28"
+            },
+            {
+                "candidate_id": "C001",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-30"
+            },
+            {
+                "candidate_id": "C015",
+                "event_type": "screening_completed",
+                "event_date": "2026-10-30"
+            },
+            {
+                "candidate_id": "C006",
+                "event_type": "application_submitted",
+                "event_date": "2026-10-31"
+            },
+            {
+                "candidate_id": "C016",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C017",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C018",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C019",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C020",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C021",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C022",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C023",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C024",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C025",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C026",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C027",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C028",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C029",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C030",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C031",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C032",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C033",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C034",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C035",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C036",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C037",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C038",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C039",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C040",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C041",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C042",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C043",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C044",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C045",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C046",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C047",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C048",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C049",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C050",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C051",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C052",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C053",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C054",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C055",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C056",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C057",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C058",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C059",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C060",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C061",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C062",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C063",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C064",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            },
+            {
+                "candidate_id": "C065",
+                "event_type": "resume_uploaded",
+                "event_date": "2026-11-04"
+            }
+        ],
+        "validation_issues": [
+            {
+                "record_type": "candidates",
+                "record_id": "C009",
+                "field": "experience_years",
+                "issue_code": "missing_optional_value",
+                "message": "Optional value missing in column 'experience_years'.",
+                "severity": "warning",
+                "raw_value": null
+            },
+            {
+                "record_type": "candidates",
+                "record_id": "C010",
+                "field": "skills",
+                "issue_code": "missing_optional_value",
+                "message": "Optional value missing in column 'skills'.",
+                "severity": "warning",
+                "raw_value": null
+            },
+            {
+                "record_type": "candidates",
+                "record_id": "C053",
+                "field": "skills",
+                "issue_code": "missing_optional_value",
+                "message": "Optional value missing in column 'skills'.",
+                "severity": "warning",
+                "raw_value": null
+            }
+        ],
+        "duplicate_review_candidates": [
+            {
+                "candidate_id_1": "C004",
+                "candidate_id_2": "C005",
+                "reason": "same_email",
+                "review_status": "Pending"
+            },
+            {
+                "candidate_id_1": "C007",
+                "candidate_id_2": "C008",
+                "reason": "same_phone",
+                "review_status": "Pending"
+            }
+        ],
+        "processing_metadata": {
+            "input_record_counts": {
+                "candidates": 73,
+                "jobs": 2,
+                "applications": 29,
+                "activity": 79,
+                "skill_dictionary": 80
+            },
+            "output_record_counts": {
+                "candidates": 73,
+                "jobs": 2,
+                "applications": 29,
+                "activity": 79
+            },
+            "missing_value_counts": {
+                "candidates": 125,
+                "jobs": 0,
+                "applications": 0,
+                "activity": 0,
+                "skill_dictionary": 0
+            }
+        }
+    },
+    "summary": {
+        "candidate_count": 73,
+        "job_count": 2,
+        "application_count": 29,
+        "activity_count": 79,
+        "error_count": 0,
+        "warning_count": 3,
+        "possible_duplicate_pair_count": 2
+    },
+    "errors": []
+}
