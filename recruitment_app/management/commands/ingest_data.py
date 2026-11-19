@@ -4,11 +4,11 @@ from django.core.management.base import BaseCommand
 from recruitment_app.models import Candidate, JobPosting, Application, Activity
 
 class Command(BaseCommand):
-    help = 'Ingests cleaned recruitment JSON output into the Django database'
+    help = 'Ingests cleaned recruitment and AI automation JSON outputs into the Django database'
 
     def handle(self, *args, **options):
-        # 1. Define the path to the Data Preparation JSON output file
-        json_path = Path("outputs/data_preparation/data_preparation.json")
+        # 1. Define the path to the real Data Preparation JSON output file
+        json_path = Path("outputs/data_preparation/normalized_data.json")
         
         if not json_path.exists():
             self.stdout.write(self.style.ERROR(f"Output file not found at {json_path}"))
@@ -19,9 +19,10 @@ class Command(BaseCommand):
             payload = json.load(f)
 
         # Ensure the module run was successful
-        if payload.get("status") != "success":
-            self.stdout.write(self.style.WARNING("Module run status was not success. Aborting ingestion."))
-            return
+        status = payload.get("status")
+        if status not in ("success", "partial_success"):
+         self.stdout.write(self.style.WARNING(f"Module run status was '{status}'. Aborting ingestion."))
+         return
 
         data = payload.get("data", {})
         candidates_data = data.get("candidates", [])
@@ -32,7 +33,6 @@ class Command(BaseCommand):
         # 3. Ingest Candidates
         candidate_count = 0
         for c in candidates_data:
-            # Join list of canonical skills back into a semicolon-separated string for storage
             skills_str = "; ".join(c.get("skills", [])) if isinstance(c.get("skills"), list) else c.get("skills", "")
             
             Candidate.objects.update_or_create(
@@ -101,6 +101,33 @@ class Command(BaseCommand):
             except Candidate.DoesNotExist:
                 self.stdout.write(self.style.WARNING(f"Skipping activity for missing candidate: {act.get('candidate_id')}"))
 
+        # 7. Also ingest parsed resumes from AI Automation output
+        ai_path = Path("modules/ai_automation/outputs/ai_automation.json")
+        ai_count = 0
+        if ai_path.exists():
+            with open(ai_path, "r", encoding="utf-8") as f:
+                ai_payload = json.load(f)
+            
+            if ai_payload.get("status") == "success":
+                for item in ai_payload.get("data", {}).get("extractions", []):
+                    skills_list = [s["canonical_skill"] for s in item.get("skills", []) if "canonical_skill" in s]
+                    edu_list = [e["value"] for e in item.get("education", []) if "value" in e]
+
+                    Candidate.objects.update_or_create(
+                        candidate_id=item["candidate_id"],
+                        defaults={
+                            "name": item.get("name", {}).get("value"),
+                            "email": item.get("email", {}).get("value"),
+                            "phone": item.get("phone", {}).get("value"),
+                            "location": None,
+                            "experience_years": item.get("experience_years", {}).get("value", 0),
+                            "skills": "; ".join(skills_list),
+                            "education": "; ".join(edu_list),
+                            "source": "AI Automation",
+                            "application_date": None,
+                        }
+                    )
+                    ai_count += 1
         self.stdout.write(self.style.SUCCESS(
-            f"Successfully ingested: {candidate_count} candidates, {job_count} jobs, {app_count} applications, and {activity_count} activities!"
+            f"Successfully ingested: {candidate_count} candidates, {job_count} jobs, {app_count} applications, {activity_count} activities, and {ai_count} AI-extracted candidates!"
         ))
