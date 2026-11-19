@@ -9,4 +9,6 @@ urlpatterns = [
     path("applications/", views.application_list, name="api-application-list"),
     path("activities/", views.activity_list, name="api-activity-list"),
     path("analytics/summary/", views.analytics_summary, name="api-analytics-summary"),
+    path("matching/<str:job_id>/", views.job_matching, name="api-job-matching"),
+    path("resumes/upload/", views.resume_upload, name="api-resume-upload"),
 ]

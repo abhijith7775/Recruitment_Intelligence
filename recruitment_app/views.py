@@ -1,9 +1,16 @@
 from collections import Counter
+from datetime import date
+from pathlib import Path
+import tempfile
+
 from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
-from django.views.decorators.http import require_GET
-from .models import Candidate, JobPosting, Application, Activity
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_GET, require_POST
+
+from modules.ai_automation.pipeline import run_ai_automation
+from .models import Activity, Application, Candidate, JobPosting
 
 
 def _parse_skills(skills_value):
@@ -198,3 +205,186 @@ def analytics_summary(request):
             for skill, count in skill_counts.most_common(10)
         ],
     })
+
+
+def _compute_job_match(candidate_data, job_data):
+    """Score a serialized candidate against a serialized job posting (0.0 to 100.0)."""
+    req_skills = [s.lower() for s in job_data["required_skills"]]
+    cand_skills_lower = {s.lower() for s in candidate_data["skills"]}
+
+    matched_skills = [
+        s for s in job_data["required_skills"] if s.lower() in cand_skills_lower
+    ]
+    missing_skills = [
+        s for s in job_data["required_skills"] if s.lower() not in cand_skills_lower
+    ]
+
+    if req_skills:
+        skill_ratio = len(matched_skills) / len(req_skills)
+        skill_score = skill_ratio * 80.0
+    else:
+        skill_ratio = 1.0
+        skill_score = 80.0
+
+    exp = candidate_data["experience_years"]
+    min_exp = job_data["min_experience"]
+    max_exp = job_data["max_experience"]
+
+    if exp is None:
+        exp_score = 0.0
+    else:
+        above_min = (min_exp is None) or (exp >= min_exp)
+        below_max = (max_exp is None) or (exp <= max_exp)
+        if above_min and below_max:
+            exp_score = 20.0
+        elif above_min:
+            exp_score = 12.0
+        else:
+            exp_score = 5.0
+
+    total_score = round(skill_score + exp_score, 1)
+    return {
+        "candidate_id": candidate_data["candidate_id"],
+        "name": candidate_data["name"],
+        "email": candidate_data["email"],
+        "experience_years": candidate_data["experience_years"],
+        "match_score": total_score,
+        "skill_match_percent": round(skill_ratio * 100.0, 1),
+        "matched_skills": matched_skills,
+        "missing_skills": missing_skills,
+    }
+
+
+@require_GET
+def job_matching(request, job_id):
+    job = get_object_or_404(JobPosting, job_id=job_id)
+    job_data = _serialize_job(job)
+
+    min_score_raw = request.GET.get("min_score", "").strip()
+    try:
+        min_score = float(min_score_raw) if min_score_raw else 0.0
+    except ValueError:
+        return JsonResponse({"error": "Invalid min_score parameter"}, status=400)
+
+    matches = []
+    for candidate in Candidate.objects.all().order_by("candidate_id"):
+        cand_data = _serialize_candidate(candidate)
+        entry = _compute_job_match(cand_data, job_data)
+        if entry["match_score"] >= min_score:
+            matches.append(entry)
+
+    matches.sort(key=lambda item: (-item["match_score"], item["candidate_id"]))
+
+    return JsonResponse({
+        "job": job_data,
+        "count": len(matches),
+        "results": matches,
+    })
+
+
+@csrf_exempt
+@require_POST
+def resume_upload(request):
+    """Upload a resume file, extract structured fields via AI automation, and save Candidate."""
+    uploaded_file = request.FILES.get("resume") or request.FILES.get("file")
+    if not uploaded_file:
+        return JsonResponse(
+            {"error": "No resume file provided. Send multipart form data with field 'resume'."},
+            status=400,
+        )
+
+    allowed_extensions = {".pdf", ".docx", ".doc", ".txt"}
+    ext = Path(uploaded_file.name).suffix.lower()
+    if ext not in allowed_extensions:
+        return JsonResponse(
+            {"error": f"Unsupported file type '{ext}'. Allowed: pdf, docx, doc, txt."},
+            status=400,
+        )
+
+    temp_dir = Path(tempfile.mkdtemp(prefix="django_resume_"))
+    temp_file_path = temp_dir / uploaded_file.name
+
+    try:
+        with temp_file_path.open("wb") as handle:
+            for chunk in uploaded_file.chunks():
+                handle.write(chunk)
+
+        report = run_ai_automation(
+            [temp_file_path],
+            append_to_csv=True,
+            application_date=date.today().isoformat(),
+        )
+    except Exception as exc:
+        return JsonResponse(
+            {"error": f"Resume extraction failed: {exc}"},
+            status=500,
+        )
+    finally:
+        if temp_file_path.exists():
+            temp_file_path.unlink(missing_ok=True)
+        if temp_dir.exists():
+            try:
+                temp_dir.rmdir()
+            except OSError:
+                pass
+
+    if not report.added_candidate_rows:
+        return JsonResponse(
+            {
+                "error": "Pipeline completed without producing a candidate row.",
+                "pipeline_status": report.output_payload.get("status"),
+                "errors": report.output_payload.get("errors", []),
+            },
+            status=422,
+        )
+
+    row = report.added_candidate_rows[0]
+    cid = (row.get("candidate_id") or "").strip()
+    if not cid:
+        return JsonResponse(
+            {"error": "Extracted candidate is missing candidate_id."},
+            status=422,
+        )
+
+    exp_raw = (row.get("experience_years") or "").strip()
+    try:
+        exp_years = float(exp_raw) if exp_raw else None
+    except ValueError:
+        exp_years = None
+
+    app_date_raw = (row.get("application_date") or "").strip()
+    try:
+        parsed_date = date.fromisoformat(app_date_raw) if app_date_raw else date.today()
+    except ValueError:
+        parsed_date = date.today()
+
+    candidate, created = Candidate.objects.update_or_create(
+        candidate_id=cid,
+        defaults={
+            "name": (row.get("name") or "").strip() or None,
+            "email": (row.get("email") or "").strip() or None,
+            "phone": (row.get("phone") or "").strip() or None,
+            "location": (row.get("location") or "").strip() or None,
+            "experience_years": exp_years,
+            "skills": (row.get("skills") or "").strip() or None,
+            "education": (row.get("education") or "").strip() or None,
+            "source": (row.get("source") or "").strip() or "AI Automation",
+            "application_date": parsed_date,
+        },
+    )
+
+    Activity.objects.create(
+        candidate=candidate,
+        event_type="resume_uploaded",
+        event_date=date.today(),
+    )
+
+    return JsonResponse(
+        {
+            "created": created,
+            "candidate": _serialize_candidate(candidate),
+            "duplicate_alerts": report.duplicate_alerts,
+            "pipeline_run_id": report.output_payload.get("run_id"),
+        },
+        status=201 if created else 200,
+    )
