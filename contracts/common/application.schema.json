@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Application",
-  "description": "Application stage-history row based on applications_cleaned.csv. Preserve every transition as a separate row.",
+  "description": "Application stage-history row based on applications_cleaned.csv. Preserve every transition as a separate row. application_id is optional for legacy CSV records and should be assigned by the backend for new application records.",
   "type": "object",
   "properties": {
     "candidate_id": {
@@ -38,6 +38,17 @@
         "null"
       ],
       "description": "Optional recruiter identifier."
+    },
+    "application_id": {
+      "type": "string",
+      "description": "Stable backend-assigned identifier for one application. Different submissions may create distinct applications."
+    },
+    "source_submission_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Submission reference that created or updated this application, if available."
     }
   },
   "required": [
