@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Candidate",
-  "description": "Normalized candidate record based on candidates_cleaned.csv. Blank optional CSV values become JSON null.",
+  "description": "Normalized candidate record based on candidates_cleaned.csv. Blank optional CSV values become JSON null. Optional provenance fields support incremental ingestion; candidate_id remains a backend-assigned stable identifier.",
   "type": "object",
   "properties": {
     "candidate_id": {
@@ -72,6 +72,21 @@
       ],
       "description": "ISO date YYYY-MM-DD.",
       "format": "date"
+    },
+    "source_submission_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Submission that supplied this candidate data, when applicable. Not a candidate identity key."
+    },
+    "profile_updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "Timestamp of the accepted profile update, if tracked by the backend."
     }
   },
   "required": [

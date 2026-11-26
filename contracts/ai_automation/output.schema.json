@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Ai Automation Output",
-  "description": "Prototype 0.1 output contract for ai_automation.",
+  "description": "Version 0.2 output contract for ai_automation. Extracted values are unverified suggestions.",
   "type": "object",
   "properties": {
     "module": {
@@ -10,7 +10,7 @@
     },
     "schema_version": {
       "type": "string",
-      "const": "0.1"
+      "const": "0.2"
     },
     "run_id": {
       "type": "string",
@@ -283,6 +283,36 @@
                   "partial_success",
                   "failed"
                 ]
+              },
+              "source_submission_id": {
+                "type": "string",
+                "description": "Stable identifier for the application submission. Must remain the same when the same submission is retried."
+              },
+              "source_type": {
+                "type": "string",
+                "enum": [
+                  "resume_upload",
+                  "email",
+                  "manual_upload",
+                  "other"
+                ],
+                "description": "Origin of the submitted document."
+              },
+              "submitted_at": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time",
+                "description": "Application submission timestamp when supplied by the application layer."
+              },
+              "job_id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^J[0-9]{3,}$",
+                "description": "Job associated with this submission, if supplied by the application layer."
               }
             },
             "required": [
@@ -294,7 +324,8 @@
               "skills",
               "education",
               "missing_fields",
-              "processing_status"
+              "processing_status",
+              "source_submission_id"
             ],
             "additionalProperties": false,
             "description": "Extraction result. AI output is unverified and must not silently overwrite verified candidate records."
