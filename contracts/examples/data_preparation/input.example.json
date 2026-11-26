@@ -47,5 +47,6 @@
       "original_skill": "SQL Database",
       "canonical_skill": "sql"
     }
-  ]
+  ],
+  "input_mode": "batch"
 }
