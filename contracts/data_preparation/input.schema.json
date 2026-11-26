@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Data Preparation Input",
-  "description": "Raw CSV row payload. CSV cells are strings; blank cells remain empty strings at ingestion.",
+  "title": "Data Preparation Input v0.2",
+  "description": "Batch CSV rows or incremental AI Automation output. For incremental ingestion, provide empty arrays for unused CSV datasets and include ai_automation_output.",
   "type": "object",
   "properties": {
     "candidates": {
@@ -203,6 +203,18 @@
         "additionalProperties": false
       },
       "description": "Rows from skill_dictionary.csv."
+    },
+    "input_mode": {
+      "type": "string",
+      "enum": [
+        "batch",
+        "incremental"
+      ],
+      "description": "batch processes the supplied CSV datasets; incremental processes newly submitted application extraction data."
+    },
+    "ai_automation_output": {
+      "$ref": "../ai_automation/output.schema.json",
+      "description": "Optional complete AI Automation output envelope. Data Preparation validates and normalizes its extractions before backend persistence."
     }
   },
   "required": [
